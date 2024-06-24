@@ -1,13 +1,11 @@
 """
-This file contains code to clean text by removing excessive spaces, removing ',-' and removing common prefixes. 
+This file contains code to identify if a document is an administrative fine or administrative penalty.
 
 USAGE:
-from scripts.clean_text import run_clean_text
-run_clean_text(df)
+from scripts.categorization import ... (see file)
 
-output: df with 'cleaned_text' column.
+output: differs. (see file)
 
-note: only works if 'foi_bodyText' or 'foi_bodyTextOCR' exist.
 
 """
 def isCategoryPrimair(list_of_pages, category='sanctie'):
