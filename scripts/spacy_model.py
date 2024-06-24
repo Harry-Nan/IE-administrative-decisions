@@ -1,5 +1,5 @@
 """
-This file contains code to load the spacy model used to extract beschikkingen. Adjusted to tokenize articles as one token.
+This file contains code to load the spacy model used throughout this project.
 
 USAGE:
 from scripts.spacy_model import spacy_nlp
