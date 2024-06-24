@@ -1,11 +1,11 @@
 """
-This file contains code to clean text by removing excessive spaces, removing ',-' and removing common prefixes. 
+This file contains code to identify candidate violated articles and legal basis', returning detected articles and their corresponding idx in the list of sentences.
 
 USAGE:
-from scripts.clean_text import run_clean_text
-run_clean_text(df)
+from scripts.extract_article import find_articles
+articles, articles_idxs = find_articles(list_of_sentences, nlp)
 
-output: df with 'cleaned_text' column.
+output: list of found articles, list of articles with the idx in the sentences.
 
 note: only works if 'foi_bodyText' or 'foi_bodyTextOCR' exist.
 
