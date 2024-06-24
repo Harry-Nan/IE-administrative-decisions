@@ -1,13 +1,11 @@
 """
-This file contains code to clean text by removing excessive spaces, removing ',-' and removing common prefixes. 
+This file extracts sentences from documents based on idxs from extracted identified legal effects, violated articles and legal basis.
 
 USAGE:
-from scripts.clean_text import run_clean_text
-run_clean_text(df)
+from scripts.candidateSentences import selectCandidateSentences
+selectCandidateSentences(legal_effect_idx, articles_idxs, list_of_sentences)
 
-output: df with 'cleaned_text' column.
-
-note: only works if 'foi_bodyText' or 'foi_bodyTextOCR' exist.
+output: list of sentences
 
 """
 
