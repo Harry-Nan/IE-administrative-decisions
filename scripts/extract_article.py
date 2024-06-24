@@ -7,8 +7,6 @@ articles, articles_idxs = find_articles(list_of_sentences, nlp)
 
 output: list of found articles, list of articles with the idx in the sentences.
 
-note: only works if 'foi_bodyText' or 'foi_bodyTextOCR' exist.
-
 """
 
 import re

@@ -1,3 +1,14 @@
+"""
+This file contains code to identify candidate legal effects, returning detected legal effects and their corresponding idx in the list of sentences.
+
+USAGE:
+from scripts.extract_legal_effect import extract_legal_effect
+legal_effect_all = extract_legal_effect(list_of_sentences)
+
+output: list of found legal effects, list of legal effects with the idx in the sentences.
+
+"""
+
 from scripts.spacy_model import spacy_nlp
 nlp = spacy_nlp()
 
