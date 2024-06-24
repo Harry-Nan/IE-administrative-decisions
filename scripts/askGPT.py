@@ -1,13 +1,13 @@
 """
-This file contains code to clean text by removing excessive spaces, removing ',-' and removing common prefixes. 
+This file contains code to get a response from ChatGPT using a pre-defined prompt and extracted sentences from a single document.
 
 USAGE:
-from scripts.clean_text import run_clean_text
-run_clean_text(df)
+from scripts.askGPT import askGPT
+askGPT(candidate_sents, category='sanctie')
 
-output: df with 'cleaned_text' column.
+output: json data with extracted information (legal effect, recipient, violated article, type of activity (misconduct), decision making authority and legal basis).
 
-note: only works if 'foi_bodyText' or 'foi_bodyTextOCR' exist.
+requires: candidate sentences.
 
 """
 
