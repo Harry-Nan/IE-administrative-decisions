@@ -21,3 +21,23 @@ This GitHub contains the following:
     9) [text_to_sents.py](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/text_to_sents.py). This file contains code to convert a list of pages to a list of sentences.
 
 
+# Method: Appendix
+
+This section serves as an appendix for the paper 'Combining Rule Based and Machine-Learning Methods for Efficient Information Extraction on Administrative Decisions'.
+
+## Data selection
+The obtained data includes categories of administrative decisions that are irrelevant to this paper, such as licensing decisions. Data selection will be done to select only administrative fines and penalties within the set of administrative decisions available from both government bodies:
+
+- **Keyword extraction**. A keyword extraction technique is applied to create a subsection based on present or absent keywords for both categories. These include 'decision', and for example 'fine' and 'penalty' for administrative fines and penalties respectively. 
+- **Remove irrelevant documents through keyword extraction**. Similarly to step 1, keywords that indicate an advice document are extracted, after which the document is shortened or completely removed. In some cases, documents include an advice in their appendix in a decision. By shortening the full document and focusing solely on the decision, future steps for information extraction may be improved.
+- **Extraction of Legal Effect to remove and classify documents**. Lastly, the technique described in section \ref{sec:LErule} is applied to find the Legal Effect. If any obtained Legal Effect is associated with a word like 'fine' or 'penalty', these documents are classified with their corresponding category. If no legal effect or no matches with keywords are found, and there is no indication of the decisions resulting in a 'no fine' or 'warning' result, the document is not selected.
+
+This results in a selection of administrative fines (267) and administrative penalties (171). See the figure below. However, this selection contains noise, as the data of Woogle also includes administrative decisions related to these enforcement decisions, such as disclosure decisions and possible decisions on appeal (in response to objection to an enforcement decision).
+
+To remove disclosure decisions, legal provisions are extracted from the document (see section \ref{sec:3.2.1}). From this list of legal provisions, keyword matching is applied to check the presence of legal provisions that indicate a disclosure decision, such as 'article 3.1 from Woo'. If a match is found, the document is removed from the selection. Regarding appeal decisions, government bodies are required to include an option for the recipient to object to the decision. The time frame to send this objection is legally required to be six weeks and the type of objection differs from administrative fines/penalties and objection to appeal decisions. Sentences that contain the phrase 'six weeks' were extracted from the document, after which the sentence is checked to have the phrase 'notice of objection' present. If no sentence included this word, the document was dropped. This resulted in a selection of administrative fines and penalties, which is visualized in the figure below.
+
+![categorization11(2)](https://github.com/user-attachments/assets/4333b7bb-924e-4c25-97e7-6aec50abb8a9)
+
+Figure 1: Document classification for administrative decisions for both governing bodies. Blue indicates administrative fine, and red administrative penalty decisions. A light color indicates an internal appeal decision.
+
+A code example of this can be found on this GitHub environment on [the Demo](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/demo.ipynb) or the [Python script](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/categorization.py).
