@@ -34,10 +34,22 @@ The obtained data includes categories of administrative decisions that are irrel
 
 This results in a selection of administrative fines (267) and administrative penalties (171). See the figure below. However, this selection contains noise, as the data of Woogle also includes administrative decisions related to these enforcement decisions, such as disclosure decisions and possible decisions on appeal (in response to objection to an enforcement decision).
 
-To remove disclosure decisions, legal provisions are extracted from the document (see section \ref{sec:3.2.1}). From this list of legal provisions, keyword matching is applied to check the presence of legal provisions that indicate a disclosure decision, such as 'article 3.1 from Woo'. If a match is found, the document is removed from the selection. Regarding appeal decisions, government bodies are required to include an option for the recipient to object to the decision. The time frame to send this objection is legally required to be six weeks and the type of objection differs from administrative fines/penalties and objection to appeal decisions. Sentences that contain the phrase 'six weeks' were extracted from the document, after which the sentence is checked to have the phrase 'notice of objection' present. If no sentence included this word, the document was dropped. This resulted in a selection of administrative fines and penalties, which is visualized in the figure below.
+To remove disclosure decisions, legal provisions are extracted from the document (see later for more details). From this list of legal provisions, keyword matching is applied to check the presence of legal provisions that indicate a disclosure decision, such as 'article 3.1 from Woo'. If a match is found, the document is removed from the selection. Regarding appeal decisions, government bodies are required to include an option for the recipient to object to the decision. The time frame to send this objection is legally required to be six weeks and the type of objection differs from administrative fines/penalties and objection to appeal decisions. Sentences that contain the phrase 'six weeks' were extracted from the document, after which the sentence is checked to have the phrase 'notice of objection' present. If no sentence included this word, the document was dropped. This resulted in a selection of administrative fines and penalties, which is visualized in the figure below.
 
 ![categorization11(2)](https://github.com/user-attachments/assets/4333b7bb-924e-4c25-97e7-6aec50abb8a9)
 
 Figure 1: Document classification for administrative decisions for both governing bodies. Blue indicates administrative fine, and red administrative penalty decisions. A light color indicates an internal appeal decision.
 
 A code example of this can be found on this GitHub environment on [the Demo](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/demo.ipynb) or the [Python script](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/categorization.py).
+
+## Data Analysis
+
+![boxplots2](https://github.com/user-attachments/assets/7d32ef9f-d699-421a-9b4a-4012fbc9c646)
+
+Figure 2: Document and page analysis for the two government bodies for administrative fine and penalty decisions. Blue and red indicate fines and penalties respectively.
+
+![image](https://github.com/user-attachments/assets/793ab934-ee88-404d-9e2c-a150acc18fbb)
+
+Figure 3: Analysation-scores for documents.
+
+
