@@ -1,6 +1,6 @@
 # Combining rule-based and machine learning methods for effective information extraction on administrative decisions  
 
-This is the GitHub page for the thesis project for CITaDOG. 
+This is the GitHub page for the thesis project for [CITaDOG](https://www.tilburguniversity.edu/about/digital-sciences-society/projects/case-inclusive-transparency). 
 
 This project applies a combination of rule-based methods with machine learning methods to achieve effective information extraction from large bodies of text, more specifically Dutch administrative decisions, which were previously researched in isolation. This is done by using NER and RegExs techniques to identify key sentences that contains to be extracted information, and are analyzed and extracted by ChatGPT. Different types of information can be extracted this way, including types that do and do not consist of clearly identifiable patterns or structures. The results show that the information extraction is effective, but are dependent on the flexibility and ability of rule-based methods to correctly identify types of information, and an effective sentence extraction with sufficient information for the machine learning method to accurately shape the context. The project highlights the need of thorough analysis of the to be extracted information and its context within the data to understand what approach is needed or most efficient and accurate for information extraction.
 
