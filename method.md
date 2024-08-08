@@ -11,6 +11,11 @@ The date of the decision is the only type of information that is solely found by
 
 Code: [extract_date.py](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/extract_date.py)
 
+![image](https://github.com/user-attachments/assets/53cc4acc-01ff-4b84-9611-0830ef20c81a)
+
+**Figure 1:** Example of (uniform) structure of date in letter format and in header/footer.
+ 
+
 #
 
 ### Violated Article and Legal Basis
