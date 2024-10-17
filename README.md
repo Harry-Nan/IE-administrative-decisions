@@ -22,7 +22,7 @@ This GitHub contains the following:
     8) [spacy_model.py](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/spacy_model.py). This file contains code to load the spacy model used throughout this project.
     9) [text_to_sents.py](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/scripts/text_to_sents.py). This file contains code to convert a list of pages to a list of sentences.
 5) [`example_data`](./example_data).
-    1) [KSA.csv](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/example_data/KSA.csv). Contains example data for KSA (which is obtained from [Woogle](https://woogle.wooverheid.nl/search?publisher=zb000182&page=1&country=nl) in April 2024 and contains some irrelevant data)
+    1) [ksa.csv](https://github.com/Harry-Nan/IE-administrative-decisions/blob/main/example_data/KSA.csv). Contains example data for KSA (which is obtained from [Woogle](https://woogle.wooverheid.nl/search?publisher=zb000182&page=1&country=nl) in April 2024 and contains some irrelevant data)
    
 
 
